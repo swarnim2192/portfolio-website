@@ -1,3 +1,4 @@
+import { track } from "../analytics";
 import { motion } from "framer-motion";
 
 const projects = [

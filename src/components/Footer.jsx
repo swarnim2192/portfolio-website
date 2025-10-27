@@ -1,3 +1,4 @@
+import { track } from "../analytics";
 export default function Footer() {
   return (
     <footer className="mt-24 border-top">

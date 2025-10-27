@@ -1,3 +1,4 @@
+import { track } from "../analytics";
 export default function Contact() {
   return (
     <div className="max-w-xl">
