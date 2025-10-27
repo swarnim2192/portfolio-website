@@ -1,7 +1,22 @@
 const projects = [
-  { title: "Booth Buddy / PhotoBooth", desc: "React + Flask + Firebase app for instant photo capture and sharing.", stack: ["React","Flask","Firebase"], links: { demo: "#", code: "#" } },
-  { title: "AI Code Inspector", desc: "Automated code review using Python and GitHub API.", stack: ["Python","Flask","GitHub API"], links: { demo: "#", code: "#" } },
-  { title: "Stock Market Analysis", desc: "Real-time analysis and logistic regression predictions with Streamlit.", stack: ["Streamlit","Pandas","Sklearn"], links: { demo: "#", code: "#" } }
+  {
+    title: "AI Code Inspector",
+    desc: "AI-assisted code review using Python, Flask, OpenAI API, GitHub API; Dockerized with CI/CD. Cut review time 60%, improved standards compliance 40%, and caught 30% more bugs pre-merge.",
+    stack: [\"Python\",\"Flask\",\"OpenAI API\",\"GitHub API\",\"Docker\",\"CI/CD\"],
+    links: { demo: "#", code: "#" }
+  },
+  {
+    title: "Real-Time Stock Market Analysis with AI Prediction",
+    desc: "Streamlit dashboard with yFinance live data and logistic regression (scikit-learn) for trend prediction; improved decision-making via clear UI/UX.",
+    stack: [\"Streamlit\",\"Pandas\",\"scikit-learn\",\"yFinance\"],
+    links: { demo: "#", code: "#" }
+  },
+  {
+    title: "SmartTask Manager",
+    desc: "C++ app with SQLite and OAuth2 for secure cross-platform task management: categorization, prioritization, progress tracking.",
+    stack: [\"C++\",\"SQLite\",\"OAuth2\"],
+    links: { demo: "#", code: "#" }
+  }
 ];
 
 export default function Projects() {
