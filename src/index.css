@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 html { scroll-behavior: smooth; }
+
+
+/* == custom cursor == */
+html.custom-cursor * {
+  cursor: none !important;
+}

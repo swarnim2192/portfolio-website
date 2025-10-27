@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 
 export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
@@ -30,6 +31,7 @@ export default function App() {
         <section id="contact" className="pt-24"><Contact /></section>
       </main>
       <Footer />
+      <Cursor />
     </div>
   );
 }
