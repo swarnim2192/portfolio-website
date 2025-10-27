@@ -2,20 +2,14 @@ import { motion } from "framer-motion";
 
 const skills = {
   Languages: ["Python", "C++", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL", "Bash"],
-  Frameworks: ["React.js", "Flask", "Streamlit", "Tailwind CSS", "Framer Motion", "Firebase", "Bootstrap"],
+  Frameworks: ["React.js", "Flutter", "Flask", "Streamlit", "Tailwind CSS", "Framer Motion", "Firebase", "Supabase"],
   Data: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "yFinance"],
-  Tools: ["Git & GitHub", "GitHub Pages", "Google Analytics 4", "VS Code", "Jupyter Notebook", "Firebase Console"],
+  Tools: ["Git & GitHub", "GitHub Pages", "Google Analytics 4", "VS Code", "Jupyter Notebook", "Firebase Console", "n8n"],
   Concepts: ["Full-Stack Development", "REST APIs", "UI/UX Design", "Data Visualization", "Machine Learning", "Agile Workflow"]
 };
 
-const container = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.07 } }
-};
-const item = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }
-};
+const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.07 } } };
+const item = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } } };
 
 export default function Skills() {
   return (
