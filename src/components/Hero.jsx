@@ -21,7 +21,7 @@ export default function Hero() {
       <motion.p className="mt-6 text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400" variants={item}>Portfolio</motion.p>
       <motion.h1 className="mt-3 text-4xl sm:text-6xl font-extrabold tracking-tight" variants={item}>Swarnim Khanal</motion.h1>
       <motion.p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto" variants={item}>
-        CS @ Texas State • Research Intern • Full-stack & ML
+        Senior CS Student, Sloan Researcher & Physics TA — TXST
       </motion.p>
 
       <motion.div className="mt-8 flex items-center justify-center gap-4" variants={item}>
