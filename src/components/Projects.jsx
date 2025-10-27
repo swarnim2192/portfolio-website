@@ -58,8 +58,8 @@ export default function Projects() {
               ))}
             </div>
             <div className="mt-4 flex gap-3">
-              <a className="text-sm px-3 py-1.5 rounded-lg bg-sky-600 text-white hover:bg-sky-700" href={p.links.demo}>Demo</a>
-              <a className="text-sm px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800" href={p.links.code}>Code</a>
+              <a className="text-sm px-3 py-1.5 rounded-lg bg-sky-600 text-white hover:bg-sky-700" href={p.links.demo} onClick={() => track("project_demo_click", {project:p.title})}>Demo</a>
+              <a className="text-sm px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800" href={p.links.code} onClick={() => track("project_code_click", {project:p.title})}>Code</a>
             </div>
           </motion.article>
         ))}

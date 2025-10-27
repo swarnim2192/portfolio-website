@@ -17,8 +17,8 @@ export default function Hero() {
         CS @ Texas State • Research Intern • Full-stack & ML
       </motion.p>
       <motion.div className="mt-8 flex items-center justify-center gap-4" variants={item}>
-        <a href="#projects" className="px-5 py-2.5 rounded-xl bg-sky-600 text-white hover:bg-sky-700">Explore Projects</a>
-        <a href="#contact" className="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Contact Me</a>
+        <a href="#projects" onClick={() => track("cta_click", {label:"explore_projects", location:"hero"})} className="px-5 py-2.5 rounded-xl bg-sky-600 text-white hover:bg-sky-700">Explore Projects</a>
+        <a href="#contact" onClick={() => track("cta_click", {label:"contact_me", location:"hero"})} className="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Contact Me</a>
       </motion.div>
       <motion.div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-slate-500 dark:text-slate-400" variants={wrap} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
         {["Python","C++","React","Data Analytics"].map(s => (
