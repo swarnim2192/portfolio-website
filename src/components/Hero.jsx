@@ -8,7 +8,7 @@ export default function Hero() {
       </p>
       <div className="mt-8 flex items-center justify-center gap-4">
         <a href="#projects" className="px-5 py-2.5 rounded-xl bg-sky-600 text-white hover:bg-sky-700">Explore Projects</a>
-        <a href="/resume.pdf" className="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Download Resume</a>
+        <a href="#contact" className="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Download Resume</a>
       </div>
       <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-slate-500 dark:text-slate-400">
         {["Python","React","Django","Data Analytics"].map(s=>(
