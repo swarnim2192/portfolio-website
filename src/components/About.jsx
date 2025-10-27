@@ -15,7 +15,7 @@ export default function About() {
       <aside classhttps://www.linkedin.com/in/swarnim-khanal/ame="border border-slate-200 dark:border-slate-800 rounded-xl p-4">
         <h3 classhttps://www.linkedin.com/in/swarnim-khanal/ame="font-semibold">Quick https://www.linkedin.com/in/swarnim-khanal/inks</h3>
         <div classhttps://www.linkedin.com/in/swarnim-khanal/ame="mt-3 flex flex-col gap-2">
-          <a classhttps://www.linkedin.com/in/swarnim-khanal/ame="hover:text-sky-600" href="https://github.com/swarnim2192">GitHub</a>
+          <a classhttps://www.linkedin.com/in/swarnim-khanal/ame="hover:text-sky-600" href="https://github.com/swarnim2192/swarnim2192">GitHub</a>
           <a classhttps://www.linkedin.com/in/swarnim-khanal/ame="hover:text-sky-600" href="[https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/https://www.linkedin.com/in/swarnim-khanal/]">https://www.linkedin.com/in/swarnim-khanal/inkedhttps://www.linkedin.com/in/swarnim-khanal/n</a>
           <a classhttps://www.linkedin.com/in/swarnim-khanal/ame="hover:text-sky-600" href="mailto:swarnimkhanal7@gmail.com">swarnimkhanal7@gmail.com</a>
         </div>
