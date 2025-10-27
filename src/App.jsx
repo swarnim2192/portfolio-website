@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -23,7 +24,8 @@ export default function App() {
         <section id="home"><Hero /></section>
         <section id="about" className="pt-24"><About /></section>
         <section id="education" className="pt-24"><Education /></section>
-        <section id="skills" className="pt-24"><Skills /></section>
+                <section id="experience" className="pt-24"><Experience /></section>
+<section id="skills" className="pt-24"><Skills /></section>
         <section id="projects" className="pt-24"><Projects /></section>
         <section id="contact" className="pt-24"><Contact /></section>
       </main>
