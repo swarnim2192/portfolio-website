@@ -12,7 +12,7 @@ const projects = [
     title: "Real-Time Stock Market Analysis with AI Prediction",
     desc: "Streamlit dashboard with yFinance live data and logistic regression (scikit-learn) for trend prediction; improved decision-making via clear UI/UX.",
     stack: ["Streamlit","Pandas","scikit-learn","yFinance"],
-    links: { demo: "#", code: "#" }
+    links: { demo: "#", code: "https://github.com/swarnim2192/Stock-Analysis" }
   },
   {
     title: "SmartTask Manager",
