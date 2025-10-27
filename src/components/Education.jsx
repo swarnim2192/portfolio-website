@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 const edu = [
   {
     school: "Texas State University",
-    degree: "B.S. Computer Science",
+    degree: "B.S. in Computer Science",
     extras: "Minors: Data Analytics & Applied Mathematics",
-    date: "2023 – Present",
+    date: "May 2026 • San Marcos, TX",
     points: [
-      "Coursework: Algorithms, Data Structures, Databases, ML, Systems",
-      "Research intern experience in FEM + GPU acceleration",
-      "Clubs: GDSC, IEEE • NSA Treasurer"
+      "Relevant coursework: C++, Discrete Mathematics, Calculus, Object-Oriented Programming, Data Structures & Algorithms, Assembly Language, Computer Architecture, Computer Ethics, Internet Software Development, Software Engineering, Data Analytics, Machine Learning, Probability & Statistics."
     ]
   }
 ];
