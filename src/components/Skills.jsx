@@ -4,7 +4,7 @@ const skills = {
   Languages: ["Python", "C++", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL", "Bash"],
   Frameworks: ["React.js", "Flutter", "Flask", "Streamlit", "Tailwind CSS", "Framer Motion", "Firebase", "Supabase"],
   Data: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "yFinance"],
-  Tools: ["Git & GitHub", "GitHub Pages", "Google Analytics 4", "VS Code", "Jupyter Notebook", "Firebase Console", "n8n"],
+  Tools: ["Git & GitHub", "GitHub Pages", "Google Analytics 4", "VS Code", "Jupyter Notebook", "Firebase Console", "n8n", "Eleven8Labs"],
   Concepts: ["Full-Stack Development", "REST APIs", "UI/UX Design", "Data Visualization", "Machine Learning", "Agile Workflow"]
 };
 
