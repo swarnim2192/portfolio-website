@@ -4,7 +4,7 @@ const edu = [
   {
     school: "Texas State University",
     degree: "B.S. Computer Science",
-    extras: "Minors: Data Analytics & Mathematics",
+    extras: "Minors: Data Analytics & Applied Mathematics",
     date: "2023 – Present",
     points: [
       "Coursework: Algorithms, Data Structures, Databases, ML, Systems",
