@@ -30,7 +30,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-slate-500 dark:text-slate-400" variants={wrap} initial="hidden" whileInView="show" viewport={{ once:true, amount:0.3 }}>
-        {["Python","C++","React","Data Analytics"].map(s => (
+        {["AI & Machine Learning", "Full-Stack Development", "Data Analytics", "Creative Technology"].map(s => (
           <motion.div key={s} className="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-800" variants={item}>{s}</motion.div>
         ))}
       </motion.div>
