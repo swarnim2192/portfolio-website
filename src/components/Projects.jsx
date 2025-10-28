@@ -23,7 +23,7 @@ const projects = [
     }
   },
   {
-    title: "Real-Time Stock Market Analysis with AI Prediction",
+    title: "NeuroTrade",
     desc: "Streamlit dashboard with yFinance live data and logistic regression (scikit-learn) for trend prediction; improved decision-making via clear UI/UX.",
     stack: ["Streamlit", "Pandas", "scikit-learn", "yFinance"],
     image: "/projects/stockanalysis.png",
