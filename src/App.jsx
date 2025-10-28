@@ -9,7 +9,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Splash from "./components/Splash";
-import Cursor from "./components/Cursor";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -41,7 +40,7 @@ export default function App() {
         <section id="contact" className="pt-24"><Contact /></section>
       </main>
       <Footer />
-      <Cursor />
+      
     </div>
   );
 }
