@@ -15,10 +15,13 @@ export default function App() {
   useEffect(() => {
     const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const t = setTimeout(() => setShowSplash(false), prefersReduce ? 150 : 1200);
-    document.documentElement.classList.add("splash-active");
-    return () => { clearTimeout(t); document.documentElement.classList.remove("splash-active"); };
+    return () => clearTimeout(t);
   }, []);
+  useEffect(() => {
+    document.documentElement.classList.toggle("splash-active", showSplash);
+  }, [showSplash]);
 
+  const [showSplash, setShowSplash] = useState(true);
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
   useEffect(() => {
     const root = document.documentElement;
