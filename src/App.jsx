@@ -25,23 +25,25 @@ export default function App() {
     <>
       <Splash show={showSplash} onDone={() => setShowSplash(false)} />
       
-      <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-        <Navbar theme={theme} setTheme={setTheme} />
-        
-        {/* Hero section - full width for aurora effect */}
-        <section id="home"><Hero /></section>
-        
-        {/* Rest of the sections - constrained width */}
-        <main className="max-w-6xl mx-auto px-4">
-          <section id="about" className="pt-24"><About /></section>
-          <section id="education" className="pt-24"><Education /></section>
-          <section id="experience" className="pt-24"><Experience /></section>
-          <section id="skills" className="pt-24"><Skills /></section>
-          <section id="projects" className="pt-24"><Projects /></section>
-          <section id="contact" className="pt-24"><Contact /></section>
-        </main>
-        <Footer />
-      </div>
+      {!showSplash && (
+        <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+          <Navbar theme={theme} setTheme={setTheme} />
+          
+          {/* Hero section - full width for aurora effect */}
+          <section id="home"><Hero /></section>
+          
+          {/* Rest of the sections - constrained width */}
+          <main className="max-w-6xl mx-auto px-4">
+            <section id="about" className="pt-24"><About /></section>
+            <section id="education" className="pt-24"><Education /></section>
+            <section id="experience" className="pt-24"><Experience /></section>
+            <section id="skills" className="pt-24"><Skills /></section>
+            <section id="projects" className="pt-24"><Projects /></section>
+            <section id="contact" className="pt-24"><Contact /></section>
+          </main>
+          <Footer />
+        </div>
+      )}
     </>
   );
 }
