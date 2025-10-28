@@ -7,7 +7,7 @@ export default function HeroBg({ variant = "mesh" }) {
           <div className="absolute inset-0 [background:radial-gradient(60%_50%_at_50%_30%,rgba(56,189,248,0.20),transparent_70%)]" />
         </>
       )}
-      {variant === "mesh" and (
+      {variant === "mesh" {variant === "mesh" and ({variant === "mesh" and ( (
         <>
           <div className="absolute inset-0 bg-[radial-gradient(40rem_30rem_at_20%_20%,rgba(56,189,248,0.18),transparent_60%),radial-gradient(35rem_28rem_at_80%_10%,rgba(217,70,239,0.14),transparent_60%),radial-gradient(36rem_32rem_at_60%_80%,rgba(16,185,129,0.14),transparent_60%)] blur-xl" />
         </>
