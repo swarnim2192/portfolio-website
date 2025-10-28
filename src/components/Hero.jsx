@@ -10,6 +10,14 @@ export default function Hero() {
 
   return (
     <motion.div className="relative min-h-screen overflow-visible overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
+      {/* LIGHT_AURORA_OVERLAY */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden mix-blend-soft-light opacity-15">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[120vw] h-[120%] bg-gradient-to-br from-sky-400/30 via-fuchsia-400/20 to-emerald-400/30 blur-3xl" />
+        <div className="absolute inset-0 [background:radial-gradient(55%_45%_at_50%_30%,rgba(56,189,248,0.15),transparent_70%)]" />
+        <div className="absolute bottom-[-10%] right-[-8%] w-[24rem] h-[24rem] rounded-full bg-sky-400/18 blur-3xl" />
+        <div className="absolute top-[12%] left-[-8%] w-[20rem] h-[20rem] rounded-full bg-purple-400/16 blur-3xl" />
+      </div>
+    
       {
       /* removed */
       <div className="pointer-events-none fixed inset-0 w-screen h-screen -z-10 overflow-hidden">
