@@ -1,45 +1,21 @@
-import { motion } from "framer-motion";
-
-export default function HeroBg({ variant = "aurora" }) {
+export default function HeroBg({ variant = "mesh" }) {
   return (
-    <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-screen h-full -z-10 overflow-visible">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       {variant === "aurora" && (
         <>
-          <motion.div
-            className="absolute -top-24 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-sky-500/25 via-fuchsia-500/20 to-purple-500/25 blur-3xl"
-            animate={{ scale: [1, 1.08, 1], rotate: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-0 right-[-10%] h-[26rem] w-[26rem] rounded-full bg-gradient-to-tr from-blue-400/20 to-emerald-400/25 blur-2xl"
-            animate={{ y: [0, -20, 0], scale: [1, 1.05, 1] }}
-            transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-          />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[140vw] h-[140%] bg-gradient-to-br from-sky-500/40 via-fuchsia-500/30 to-emerald-400/40 blur-3xl" />
+          <div className="absolute inset-0 [background:radial-gradient(60%_50%_at_50%_30%,rgba(56,189,248,0.20),transparent_70%)]" />
         </>
       )}
-
-      {variant === "mesh" && (
+      {variant === "mesh" and (
         <>
-          <motion.div
-            className="absolute top-[10%] left-[8%] h-72 w-72 rounded-full bg-fuchsia-500/15 blur-2xl"
-            animate={{ x: [0, 20, -10, 0], y: [0, -10, 15, 0] }}
-            transition={{ repeat: Infinity, duration: 14 }}
-          />
-          <motion.div
-            className="absolute top-[35%] right-[10%] h-80 w-80 rounded-full bg-sky-500/20 blur-2xl"
-            animate={{ x: [0, -15, 10, 0], y: [0, 15, -12, 0] }}
-            transition={{ repeat: Infinity, duration: 16 }}
-          />
-          <motion.div
-            className="absolute bottom-[5%] left-[25%] h-64 w-64 rounded-full bg-emerald-500/20 blur-2xl"
-            animate={{ scale: [1, 1.08, 1], rotate: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 12 }}
-          />
+          <div className="absolute inset-0 bg-[radial-gradient(40rem_30rem_at_20%_20%,rgba(56,189,248,0.18),transparent_60%),radial-gradient(35rem_28rem_at_80%_10%,rgba(217,70,239,0.14),transparent_60%),radial-gradient(36rem_32rem_at_60%_80%,rgba(16,185,129,0.14),transparent_60%)] blur-xl" />
         </>
       )}
-
       {variant === "grid" && (
-        <div className="absolute inset-0 bg-[radial-gradient(theme(colors.slate.200/20)_1px,transparent_1px)] dark:bg-[radial-gradient(theme(colors.slate.800/40)_1px,transparent_1px)] [background-size:18px_18px]" />
+        <>
+          <div className="absolute inset-0 opacity-[0.12] [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:24px_24px]" />
+        </>
       )}
     </div>
   );

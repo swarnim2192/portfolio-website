@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 
+import HeroBg from "./HeroBg";
+
 export default function Hero() {
   const wrap = { hidden:{opacity:0}, show:{opacity:1, transition:{staggerChildren:0.08}} };
   const item = { hidden:{opacity:0, y:12}, show:{opacity:1, y:0, transition:{duration:0.5, ease:[0.22,1,0.36,1]}} };
@@ -10,6 +12,7 @@ export default function Hero() {
 
   return (
     <motion.div className="relative min-h-screen overflow-visible overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
+      <HeroBg variant="mesh" />
       {/* LIGHT_AURORA_OVERLAY */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden mix-blend-soft-light opacity-15">
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[120vw] h-[120%] bg-gradient-to-br from-sky-400/30 via-fuchsia-400/20 to-emerald-400/30 blur-3xl" />
