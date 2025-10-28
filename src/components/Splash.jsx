@@ -51,7 +51,7 @@ export default function Splash({ show, onDone }) {
 
             <div className="text-center">
               <div className="text-xl font-bold tracking-tight">Swarnim Khanal</div>
-              <div className="text-sm text-slate-400">Senior CS Student • Sloan Researcher • Physics TA</div>
+              <div className="text-sm text-slate-400">Senior CS Student • Full-Stack Developer • Physics TA</div>
             </div>
 
             <motion.div
