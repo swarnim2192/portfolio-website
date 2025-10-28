@@ -185,7 +185,7 @@ export default function Hero() {
         </motion.h1>
         
         <motion.p className="mt-4 text-lg text-slate-200 max-w-2xl mx-auto" variants={item}>
-          Senior CS Student, Sloan Researcher & Physics TA — TXST
+          Senior CS Student, Full-Stack Developer & Physics TA — TXST
         </motion.p>
 
         <motion.div className="mt-8 flex items-center justify-center gap-4" variants={item}>
