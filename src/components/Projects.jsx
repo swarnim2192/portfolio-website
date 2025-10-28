@@ -53,6 +53,7 @@ const item = {
 
 export default function Projects() {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseMove = (e, index) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -77,15 +78,16 @@ export default function Projects() {
             <motion.div
               key={i}
               variants={item}
-              className="group relative overflow-hidden border border-slate-200 dark:border-slate-800 rounded-xl bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm hover:border-sky-400/50 transition-all duration-300 hover:scale-110 hover:z-50 hover:shadow-2xl"
+              className="group relative overflow-visible border border-slate-200 dark:border-slate-800 rounded-xl bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm hover:border-sky-400/50 transition-all duration-300"
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
               onMouseMove={(e) => handleMouseMove(e, i)}
-              style={{
-                transform:
-                  mousePosition.index === i
-                    ? `perspective(1000px) rotateX(${(mousePosition.y - 50) * 0.1}deg) rotateY(${(mousePosition.x - 50) * -0.1}deg) scale(1.1)`
-                    : "none",
-                transition: "transform 0.3s ease-out"
+              whileHover={{ 
+                scale: 1.1,
+                zIndex: 50,
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
               }}
+              transition={{ duration: 0.3 }}
             >
               {/* Gradient overlay on hover */}
               <div
