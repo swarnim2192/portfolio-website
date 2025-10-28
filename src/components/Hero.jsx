@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <motion.div className="relative min-h-screen overflow-visible overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
       {
-      /* HERO_BG_START */
+      /* removed */
       <div className="pointer-events-none fixed inset-0 w-screen h-screen -z-10 overflow-hidden">
         {/* Wide gradient wash (higher opacity) */}
         <div className="absolute -top-48 left-1/2 -translate-x-1/2 w-[140vw] h-[140%] bg-gradient-to-br from-sky-500/55 via-fuchsia-500/45 to-emerald-400/55 blur-2xl" />
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute bottom-[-10%] right-[-8%] w-[34rem] h-[34rem] rounded-full bg-sky-400/35 blur-3xl" />
         <div className="absolute top-[10%] left-[-8%] w-[28rem] h-[28rem] rounded-full bg-purple-400/30 blur-3xl" />
       </div>
-      /* HERO_BG_END */
+      /* removed */
     }
     
       
