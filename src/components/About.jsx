@@ -8,7 +8,7 @@ export default function About() {
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold">About</h2>
           <p className="mt-4 text-slate-600 dark:text-slate-300">
-            Hi, I'm Swarnim Khanal, a Computer Science student at Texas State University with minors in Data Analytics and Applied Mathematics. I'm passionate about building innovative, data-driven solutions that blend creativity and technology—exploring AI, web development, and analytics to solve real-world problems through code. In my free time I enjoy listening to music, sketching, and playing football, which keeps me inspired and balanced while I learn and create.
+            Hi, I'm Swarnim Khanal—a full-stack developer and CS student at Texas State University who loves turning ideas into code. With a foundation in Data Analytics and Applied Mathematics, I build innovative solutions that bridge the gap between complex data and user-friendly applications. Whether I'm developing machine learning models, crafting full-stack web applications, or analyzing datasets to uncover insights, I'm driven by one goal: solving real-world problems through technology. When I'm not immersed in code, you'll find me listening to music, sketching, or playing football—hobbies that keep me balanced and inspire my creative approach to development.
           </p>
         </div>
         <aside className="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">

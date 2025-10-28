@@ -13,10 +13,10 @@ export default function Hero() {
   const fullText = "Swarnim Khanal";
   const [showCursor, setShowCursor] = useState(true);
 
-  // Typewriter effect
+  // Typewriter effect - faster speed (85ms instead of 120ms)
   useEffect(() => {
     let charIndex = 0;
-    const typingSpeed = 120; // milliseconds per character
+    const typingSpeed = 85;
 
     const typeInterval = setInterval(() => {
       if (charIndex < fullText.length) {
@@ -24,7 +24,6 @@ export default function Hero() {
         charIndex++;
       } else {
         clearInterval(typeInterval);
-        // Stop cursor blinking after typing is done
         setTimeout(() => setShowCursor(false), 500);
       }
     }, typingSpeed);
