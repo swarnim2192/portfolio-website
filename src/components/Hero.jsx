@@ -98,7 +98,7 @@ export default function Hero() {
           <motion.img
             src={process.env.PUBLIC_URL + "/profile.jpg"}
             alt="Swarnim Khanal"
-            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover ring-4 ring-sky-400/30 shadow-2xl shadow-sky-500/20"
+            className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover ring-4 ring-sky-400/30 shadow-2xl shadow-sky-500/20"
             loading="eager"
             decoding="async"
             initial={{ scale: 0.9, opacity: 0 }}
