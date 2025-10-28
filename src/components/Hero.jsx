@@ -9,16 +9,20 @@ export default function Hero() {
   const interests = ["Music","Sketching","Football"];
 
   return (
-    <motion.div className="overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
-      {/* HERO_BG_START */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        {/* Big soft gradient wash */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[120vw] h-[120%] bg-gradient-to-br from-sky-500/25 via-fuchsia-500/20 to-emerald-400/25 blur-3xl" />
+    <motion.div className="relative min-h-[70vh] overflow-visible overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
+      {
+      /* HERO_BG_START */
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        {/* Wide gradient wash (higher opacity) */}
+        <div className="absolute -top-48 left-1/2 -translate-x-1/2 w-[140vw] h-[140%] bg-gradient-to-br from-sky-500/55 via-fuchsia-500/45 to-emerald-400/55 blur-2xl" />
+        {/* Radial spotlight */}
+        <div className="absolute inset-0 [background:radial-gradient(60%_50%_at_50%_30%,rgba(56,189,248,0.28),transparent_70%)]" />
         {/* Accent blobs */}
-        <div className="absolute bottom-[-8%] right-[-8%] w-[28rem] h-[28rem] rounded-full bg-sky-400/25 blur-3xl" />
-        <div className="absolute top-[15%] left-[-6%] w-[22rem] h-[22rem] rounded-full bg-purple-400/20 blur-3xl" />
+        <div className="absolute bottom-[-10%] right-[-8%] w-[34rem] h-[34rem] rounded-full bg-sky-400/35 blur-3xl" />
+        <div className="absolute top-[10%] left-[-8%] w-[28rem] h-[28rem] rounded-full bg-purple-400/30 blur-3xl" />
       </div>
-      {/* HERO_BG_END */}
+      /* HERO_BG_END */
+    }
     
       
       <motion.div className="flex justify-center" variants={item}>
