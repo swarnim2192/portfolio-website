@@ -77,14 +77,14 @@ export default function Projects() {
             <motion.div
               key={i}
               variants={item}
-              className="group relative overflow-hidden border border-slate-200 dark:border-slate-800 rounded-xl bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm hover:border-sky-400/50 transition-all duration-300"
+              className="group relative overflow-hidden border border-slate-200 dark:border-slate-800 rounded-xl bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm hover:border-sky-400/50 transition-all duration-300 hover:scale-110 hover:z-50 hover:shadow-2xl"
               onMouseMove={(e) => handleMouseMove(e, i)}
               style={{
                 transform:
                   mousePosition.index === i
-                    ? `perspective(1000px) rotateX(${(mousePosition.y - 50) * 0.1}deg) rotateY(${(mousePosition.x - 50) * -0.1}deg)`
+                    ? `perspective(1000px) rotateX(${(mousePosition.y - 50) * 0.1}deg) rotateY(${(mousePosition.x - 50) * -0.1}deg) scale(1.1)`
                     : "none",
-                transition: "transform 0.1s ease-out"
+                transition: "transform 0.3s ease-out"
               }}
             >
               {/* Gradient overlay on hover */}
