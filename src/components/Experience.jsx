@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import Particles from "./Particles";
 
 const exp = [
   {
-    title: "Texas State–Colorado University Sloan Undergraduate Research",
+    title: "Texas State—Colorado University Sloan Undergraduate Research",
     role: "Research Intern",
     location: "San Marcos, TX",
     date: "Oct 2023 – May 2025",
@@ -28,24 +29,27 @@ const item = { hidden:{opacity:0, y:10}, show:{opacity:1, y:0, transition:{durat
 
 export default function Experience() {
   return (
-    <div>
-      <h2 className="text-2xl font-bold">Experience</h2>
-      <motion.div className="mt-6 space-y-6" variants={list} initial="hidden" whileInView="show" viewport={{ once:true, amount:0.25 }}>
-        {exp.map((e) => (
-          <motion.article key={e.title} className="rounded-2xl border border-slate-200 dark:border-slate-800 p-5" variants={item}>
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-              <div>
-                <h3 className="text-lg font-semibold">{e.title}</h3>
-                <p className="italic text-slate-600 dark:text-slate-300">{e.role}</p>
+    <div className="relative">
+      <Particles count={20} opacity={0.15} />
+      <div className="relative z-10">
+        <h2 className="text-2xl font-bold">Experience</h2>
+        <motion.div className="mt-6 space-y-6" variants={list} initial="hidden" whileInView="show" viewport={{ once:true, amount:0.25 }}>
+          {exp.map((e) => (
+            <motion.article key={e.title} className="rounded-2xl border border-slate-200 dark:border-slate-800 p-5 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm" variants={item}>
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <div>
+                  <h3 className="text-lg font-semibold">{e.title}</h3>
+                  <p className="italic text-slate-600 dark:text-slate-300">{e.role}</p>
+                </div>
+                <div className="text-sm text-slate-500 dark:text-slate-400">{e.location} • {e.date}</div>
               </div>
-              <div className="text-sm text-slate-500 dark:text-slate-400">{e.location} • {e.date}</div>
-            </div>
-            <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
-              {e.points.map(p => (<li key={p}>{p}</li>))}
-            </ul>
-          </motion.article>
-        ))}
-      </motion.div>
+              <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
+                {e.points.map(p => (<li key={p}>{p}</li>))}
+              </ul>
+            </motion.article>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 }
