@@ -57,7 +57,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 px-6 py-4 bg-white/[0.03] backdrop-blur-[20px] border border-white/20 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.3)] transition-all duration-500 hover:-translate-y-1 hover:border-sky-400/40">
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 px-6 py-4 bg-white/[0.03] backdrop-blur-[20px] border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.3)] transition-all duration-500 hover:-translate-y-1 hover:border-sky-400/40">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <a 
@@ -75,13 +75,11 @@ export default function Navbar() {
               <a
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`relative px-4 py-2 rounded-xl font-medium text-sm transition-all duration-300 hover:text-white ${
+                className={`relative px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 hover:text-white ${
                   activeSection === link.id
                     ? 'bg-gradient-to-r from-sky-500/30 to-blue-600/30 text-white shadow-lg shadow-sky-500/20 border border-sky-400/30'
                     : 'text-slate-300 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:border hover:border-sky-400/30'
-                } before:absolute before:inset-0 before:rounded-xl before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-sky-400 after:to-blue-500 after:rounded-full after:transition-all hover:after:w-[60%] ${
-                  activeSection === link.id ? 'after:w-[60%]' : ''
-                }`}
+                } before:absolute before:inset-0 before:rounded-full before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity`}
               >
                 <span className="relative z-10">{link.label}</span>
               </a>
@@ -98,7 +96,7 @@ export default function Navbar() {
               <a
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`inline-block px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300 ${
+                className={`inline-block px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                   activeSection === link.id
                     ? 'bg-gradient-to-r from-sky-500/30 to-blue-600/30 text-white shadow-md border border-sky-400/30'
                     : 'text-slate-300 bg-white/10 hover:bg-white/20 hover:shadow-[0_0_10px_rgba(56,189,248,0.3)] hover:border hover:border-sky-400/30'
