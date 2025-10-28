@@ -8,7 +8,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import GlobalBg from "./components/GlobalBg";
 import Splash from "./components/Splash";
 
 export default function App() {
@@ -31,8 +30,7 @@ export default function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
   return (
-    <div className="min-h-screen bg-transparent text-slate-900 dark:bg-transparent dark:text-slate-100">
-      <GlobalBg />
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <Navbar theme={theme} setTheme={setTheme} />
       <Splash show={showSplash} onDone={() => setShowSplash(false)} />
       <main className="max-w-6xl mx-auto px-4">
