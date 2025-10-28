@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import HeroBg from "./HeroBg";
 
 export default function Hero() {
   const wrap = { hidden:{opacity:0}, show:{opacity:1, transition:{staggerChildren:0.08}} };
@@ -9,9 +8,21 @@ export default function Hero() {
   const interests = ["Music","Sketching","Football"];
 
   return (
-    <div className="relative min-h-screen flex items-center">
-      <HeroBg variant="aurora" />
-      
+    <div className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Aurora Background */}
+      <div className="absolute inset-0 -z-10">
+        {/* Dark base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950" />
+        
+        {/* Aurora orbs */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s', animationDuration: '3s'}} />
+        <div className="absolute bottom-1/4 left-1/3 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s', animationDuration: '4s'}} />
+        
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/20 to-slate-950/50" />
+      </div>
+
       <motion.div className="relative z-10 w-full py-24 sm:py-32 text-center px-4" variants={wrap} initial="hidden" animate="show">
         <motion.div className="flex justify-center" variants={item}>
           <motion.img
