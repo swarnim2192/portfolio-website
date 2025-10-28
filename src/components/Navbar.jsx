@@ -57,13 +57,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 px-6 py-4 bg-white/[0.03] backdrop-blur-[20px] border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.3)] transition-all duration-500 hover:-translate-y-1 hover:border-sky-400/40">
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 px-6 py-4 bg-white/[0.03] backdrop-blur-[20px] border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.3)] transition-all duration-500 hover:-translate-y-1 hover:border-sky-400/40 hover:scale-[1.02]">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <a 
           href="#home" 
           onClick={(e) => handleNavClick(e, 'home')}
-          className="text-xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent hover:from-blue-100 hover:to-sky-300 transition-all duration-300"
+          className="text-xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent hover:from-blue-100 hover:to-sky-300 transition-all duration-300 hover:scale-110 outline-none focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-400"
         >
           Swarnim Khanal
         </a>
@@ -75,9 +75,9 @@ export default function Navbar() {
               <a
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`relative px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 hover:text-white ${
+                className={`relative px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5 outline-none focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-400 focus-visible:outline-offset-2 ${
                   activeSection === link.id
-                    ? 'bg-gradient-to-r from-sky-500/30 to-blue-600/30 text-white shadow-lg shadow-sky-500/20 border border-sky-400/30'
+                    ? 'bg-gradient-to-r from-sky-500/30 to-blue-600/30 text-white shadow-lg shadow-sky-500/20 border border-sky-400/30 scale-105'
                     : 'text-slate-300 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:border hover:border-sky-400/30'
                 } before:absolute before:inset-0 before:rounded-full before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity`}
               >
@@ -96,9 +96,9 @@ export default function Navbar() {
               <a
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`inline-block px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                className={`inline-block px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 active:scale-95 outline-none focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-400 ${
                   activeSection === link.id
-                    ? 'bg-gradient-to-r from-sky-500/30 to-blue-600/30 text-white shadow-md border border-sky-400/30'
+                    ? 'bg-gradient-to-r from-sky-500/30 to-blue-600/30 text-white shadow-md border border-sky-400/30 scale-105'
                     : 'text-slate-300 bg-white/10 hover:bg-white/20 hover:shadow-[0_0_10px_rgba(56,189,248,0.3)] hover:border hover:border-sky-400/30'
                 }`}
               >
