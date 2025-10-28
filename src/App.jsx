@@ -8,20 +8,9 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Splash from "./components/Splash";
+import Cursor from "./components/Cursor";
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
-  useEffect(() => {
-    const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const t = setTimeout(() => setShowSplash(false), prefersReduce ? 150 : 1200);
-    return () => clearTimeout(t);
-  }, []);
-  useEffect(() => {
-    document.documentElement.classList.toggle("splash-active", showSplash);
-  }, [showSplash]);
-
-
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
   useEffect(() => {
     const root = document.documentElement;
@@ -32,18 +21,21 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <Navbar theme={theme} setTheme={setTheme} />
-      <Splash show={showSplash} onDone={() => setShowSplash(false)} />
+      
+      {/* Hero section - full width for aurora effect */}
+      <section id="home"><Hero /></section>
+      
+      {/* Rest of the sections - constrained width */}
       <main className="max-w-6xl mx-auto px-4">
-        <section id="home"><Hero /></section>
         <section id="about" className="pt-24"><About /></section>
         <section id="education" className="pt-24"><Education /></section>
-                <section id="experience" className="pt-24"><Experience /></section>
-<section id="skills" className="pt-24"><Skills /></section>
+        <section id="experience" className="pt-24"><Experience /></section>
+        <section id="skills" className="pt-24"><Skills /></section>
         <section id="projects" className="pt-24"><Projects /></section>
         <section id="contact" className="pt-24"><Contact /></section>
       </main>
       <Footer />
-      
+      <Cursor />
     </div>
   );
 }
