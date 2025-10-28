@@ -6,21 +6,18 @@ import { useState } from "react";
 const projects = [
   {
     title: "AI Code Inspector",
-    icon: "🤖",
     desc: "AI-assisted code review using Python, Flask, OpenAI API, GitHub API; Dockerized with CI/CD. Cut review time 60%, improved standards compliance 40%, and caught 30% more bugs pre-merge.",
     stack: ["Python","Flask","OpenAI API","GitHub API","Docker","CI/CD"],
     links: { demo: "#", code: "#" }
   },
   {
     title: "Real-Time Stock Market Analysis with AI Prediction",
-    icon: "📈",
     desc: "Streamlit dashboard with yFinance live data and logistic regression (scikit-learn) for trend prediction; improved decision-making via clear UI/UX.",
     stack: ["Streamlit","Pandas","scikit-learn","yFinance"],
     links: { demo: "#", code: "https://github.com/swarnim2192/Stock-Analysis" }
   },
   {
     title: "SmartTask Manager",
-    icon: "✅",
     desc: "C++ app with SQLite and OAuth2 for secure cross-platform task management: categorization, prioritization, progress tracking.",
     stack: ["C++","SQLite","OAuth2"],
     links: { demo: "#", code: "#" }
@@ -94,11 +91,6 @@ export default function Projects() {
               />
 
               <div className="relative z-10">
-                {/* Project Icon */}
-                <div className="text-5xl mb-4 filter drop-shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                  {p.icon}
-                </div>
-
                 {/* Project Title with Gradient */}
                 <h3 className="font-bold text-xl mb-3 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                   {p.title}
