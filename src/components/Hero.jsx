@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-import HeroBg from "./HeroBg";
 
 export default function Hero() {
   const wrap = { hidden:{opacity:0}, show:{opacity:1, transition:{staggerChildren:0.08}} };
@@ -11,7 +10,17 @@ export default function Hero() {
 
   return (
     <motion.div className="overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
-      <HeroBg variant="aurora" />
+      {/* HERO_BG_START */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        {/* Big soft gradient wash */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[120vw] h-[120%] bg-gradient-to-br from-sky-500/25 via-fuchsia-500/20 to-emerald-400/25 blur-3xl" />
+        {/* Accent blobs */}
+        <div className="absolute bottom-[-8%] right-[-8%] w-[28rem] h-[28rem] rounded-full bg-sky-400/25 blur-3xl" />
+        <div className="absolute top-[15%] left-[-6%] w-[22rem] h-[22rem] rounded-full bg-purple-400/20 blur-3xl" />
+      </div>
+      {/* HERO_BG_END */}
+    
+      
       <motion.div className="flex justify-center" variants={item}>
         <motion.img
           src={process.env.PUBLIC_URL + "/profile.jpg"}
