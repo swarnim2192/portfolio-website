@@ -8,9 +8,18 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Splash from "./components/Splash";
 import Cursor from "./components/Cursor";
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  useEffect(() => {
+    const prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const t = setTimeout(() => setShowSplash(false), prefersReduce ? 150 : 1200);
+    document.documentElement.classList.add("splash-active");
+    return () => { clearTimeout(t); document.documentElement.classList.remove("splash-active"); };
+  }, []);
+
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
   useEffect(() => {
     const root = document.documentElement;
@@ -21,6 +30,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <Navbar theme={theme} setTheme={setTheme} />
+      <Splash show={showSplash} onDone={() => setShowSplash(false)} />
       <main className="max-w-6xl mx-auto px-4">
         <section id="home"><Hero /></section>
         <section id="about" className="pt-24"><About /></section>

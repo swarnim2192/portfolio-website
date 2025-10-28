@@ -8,3 +8,9 @@ html { scroll-behavior: smooth; }
 html.custom-cursor * {
   cursor: none !important;
 }
+
+
+/* splash-only tweaks */
+html.splash-active, html.splash-active body {
+  overflow: hidden;
+}
