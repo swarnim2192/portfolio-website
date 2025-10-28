@@ -8,6 +8,30 @@ export default function Hero() {
   const focus = ["AI & Machine Learning","Full-Stack Development","Data Analytics","Creative Technology"];
   const interests = ["Music","Sketching","Football"];
 
+  // Typewriter effect state
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = "Swarnim Khanal";
+  const [showCursor, setShowCursor] = useState(true);
+
+  // Typewriter effect
+  useEffect(() => {
+    let charIndex = 0;
+    const typingSpeed = 120; // milliseconds per character
+
+    const typeInterval = setInterval(() => {
+      if (charIndex < fullText.length) {
+        setDisplayedText(fullText.substring(0, charIndex + 1));
+        charIndex++;
+      } else {
+        clearInterval(typeInterval);
+        // Stop cursor blinking after typing is done
+        setTimeout(() => setShowCursor(false), 500);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(typeInterval);
+  }, []);
+
   // Generate random particles
   const [particles, setParticles] = useState([]);
   
@@ -151,7 +175,16 @@ export default function Hero() {
         </motion.div>
 
         <motion.p className="mt-6 text-sm uppercase tracking-widest text-sky-300/80" variants={item}>Portfolio</motion.p>
-        <motion.h1 className="mt-3 text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-lg" variants={item}>Swarnim Khanal</motion.h1>
+        
+        {/* Typewriter Name */}
+        <motion.h1 
+          className="mt-3 text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-lg min-h-[4rem]" 
+          variants={item}
+        >
+          {displayedText}
+          {showCursor && <span className="inline-block w-1 h-12 sm:h-16 bg-sky-400 ml-1 animate-pulse" style={{ verticalAlign: 'middle' }}></span>}
+        </motion.h1>
+        
         <motion.p className="mt-4 text-lg text-slate-200 max-w-2xl mx-auto" variants={item}>
           Senior CS Student, Sloan Researcher & Physics TA — TXST
         </motion.p>
