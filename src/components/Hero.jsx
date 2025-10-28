@@ -12,7 +12,7 @@ export default function Hero() {
     <motion.div className="relative min-h-screen overflow-visible overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
       {
       /* HERO_BG_START */
-      <div className="pointer-events-none fixed inset-0 w-screen h-screen -z-10 overflow-hidden>
+      <div className="pointer-events-none fixed inset-0 w-screen h-screen -z-10 overflow-hidden">
         {/* Wide gradient wash (higher opacity) */}
         <div className="absolute -top-48 left-1/2 -translate-x-1/2 w-[140vw] h-[140%] bg-gradient-to-br from-sky-500/55 via-fuchsia-500/45 to-emerald-400/55 blur-2xl" />
         {/* Radial spotlight */}
