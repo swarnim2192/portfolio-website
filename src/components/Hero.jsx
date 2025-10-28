@@ -10,7 +10,7 @@ export default function Hero() {
   const interests = ["Music","Sketching","Football"];
 
   return (
-    <motion.div className="relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
+    <motion.div className="overflow-visible relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
       <HeroBg variant="aurora" />
       <motion.div className="flex justify-center" variants={item}>
         <motion.img

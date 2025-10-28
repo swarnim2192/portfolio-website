@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroBg({ variant = "aurora" }) {
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-screen h-full -z-10 overflow-visible">
       {variant === "aurora" && (
         <>
           <motion.div
