@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import HeroBg from "./HeroBg";
+
 export default function Hero() {
   const wrap = { hidden:{opacity:0}, show:{opacity:1, transition:{staggerChildren:0.08}} };
   const item = { hidden:{opacity:0, y:12}, show:{opacity:1, y:0, transition:{duration:0.5, ease:[0.22,1,0.36,1]}} };
@@ -8,7 +10,8 @@ export default function Hero() {
   const interests = ["Music","Sketching","Football"];
 
   return (
-    <motion.div className="py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
+    <motion.div className="relative py-24 sm:py-32 text-center" variants={wrap} initial="hidden" animate="show">
+      <HeroBg variant="aurora" />
       <motion.div className="flex justify-center" variants={item}>
         <motion.img
           src={process.env.PUBLIC_URL + "/profile.jpg"}
