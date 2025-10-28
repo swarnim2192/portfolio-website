@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const wrap = { hidden:{opacity:0}, show:{opacity:1, transition:{staggerChildren:0.08}} };
@@ -6,6 +7,22 @@ export default function Hero() {
 
   const focus = ["AI & Machine Learning","Full-Stack Development","Data Analytics","Creative Technology"];
   const interests = ["Music","Sketching","Football"];
+
+  // Generate random particles
+  const [particles, setParticles] = useState([]);
+  
+  useEffect(() => {
+    const newParticles = Array.from({ length: 50 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 4 + 2,
+      duration: Math.random() * 20 + 10,
+      delay: Math.random() * 5,
+      opacity: Math.random() * 0.5 + 0.3
+    }));
+    setParticles(newParticles);
+  }, []);
 
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden">
@@ -77,6 +94,32 @@ export default function Hero() {
             animationDelay: '3s',
           }}
         />
+        
+        {/* Floating Particles */}
+        {particles.map((particle) => (
+          <motion.div
+            key={particle.id}
+            className="absolute rounded-full bg-white"
+            style={{
+              left: `${particle.x}%`,
+              top: `${particle.y}%`,
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+              opacity: particle.opacity,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              x: [0, Math.sin(particle.id) * 50, 0],
+              opacity: [particle.opacity, particle.opacity * 0.3, particle.opacity],
+            }}
+            transition={{
+              duration: particle.duration,
+              repeat: Infinity,
+              delay: particle.delay,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
         
         {/* Overlay for depth */}
         <div 
