@@ -21,7 +21,7 @@ export default function App() {
     document.documentElement.classList.toggle("splash-active", showSplash);
   }, [showSplash]);
 
-  const [showSplash, setShowSplash] = useState(true);
+
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
   useEffect(() => {
     const root = document.documentElement;
